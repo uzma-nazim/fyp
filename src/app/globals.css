@@ -31,6 +31,12 @@ img {
 ul {
   padding-left: 0;
   margin-bottom: 0;
+  
+}
+
+h6{
+  color: #fe4447 !important;
+  margin-top: 10px !important;
 }
 
 a {
@@ -58,6 +64,7 @@ a:hover {
 .inner {
   max-width: 850px;
   margin: auto;
+  padding-bottom: 30px;
   border-radius: 10px !important;
   background: #fff;
   display: flex;
@@ -235,7 +242,8 @@ button {
   font-size: 15px;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Montserrat-SemiBold";
+  font-family: "Montserrat", sans-serif;
+  
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
