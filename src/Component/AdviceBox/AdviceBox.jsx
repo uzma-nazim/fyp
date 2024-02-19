@@ -5,8 +5,8 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const AdviceBox = () => {
   const router = useSearchParams().getAll("data")[0];
-  const { query } = router;
-  const [data, setdata] = useState(JSON.parse(router));
+  
+  const [data, setdata] = useState(JSON.parse(router??"{}"));
   const [advice, setadvice] = useState("loading...");
   console.log("query", data);
   useEffect(() => {
