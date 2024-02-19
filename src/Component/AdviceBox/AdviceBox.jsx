@@ -8,7 +8,7 @@ const AdviceBox = () => {
   
   const [data, setdata] = useState(JSON.parse(router??"{}"));
   const [advice, setadvice] = useState("loading...");
-  console.log("query", data);
+  
   useEffect(() => {
     if (data.weight > 60 && data.weight <= 75) {
       const htmlContent = `
@@ -140,7 +140,7 @@ const AdviceBox = () => {
     ;
       setadvice(htmlContent);
     }
-  }, [data]);
+  }, [router]);
 
   return (
     <div

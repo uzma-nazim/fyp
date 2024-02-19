@@ -10,7 +10,7 @@ const LoginForm = () => {
   const router = useRouter();
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("runn");
+    
     router.push("/question");
   };
   return (

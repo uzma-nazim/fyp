@@ -3,7 +3,7 @@ import AdviceBox from '@/Component/AdviceBox/AdviceBox'
 import Header from '@/Component/Header/Header'
 import React from 'react'
 
-const page = () => {
+const index = () => {
   return (
     <>
     <Header/>
@@ -12,4 +12,4 @@ const page = () => {
   )
 }
 
-export default page
+export default index

@@ -58,7 +58,7 @@ const SurveyForm = () => {
     const noCount = Object.values(answers).filter(
       (answer) => answer === "no"
     ).length;
-    console.log("yesCount", yesCount, noCount);
+    
 
     // Redirect based on conditions
     if (yesCount > 3) {

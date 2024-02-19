@@ -13,10 +13,10 @@ const WeightForm = () => {
     height: "",
     weight: "",
   });
-  console.log("formData", formData);
+  
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("runn");
+    
     router.push("/question");
   };
   const handleChange = (e) => {
@@ -48,7 +48,7 @@ const WeightForm = () => {
     //   }
     // }
     // const data = queryParams.join("&");
-    // console.log("data",data);
+    // 
   };
   return (
     <>
