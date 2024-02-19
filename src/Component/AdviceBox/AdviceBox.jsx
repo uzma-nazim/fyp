@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import surveyVector from "@/images/advice.jpg";
 import bg from "@/images/bg.jpg";
@@ -141,7 +142,9 @@ const AdviceBox = () => {
       setadvice(htmlContent);
     }
   }, [router]);
-
+  if (!router) {
+    return <div>Loading...</div>; // You can customize the loading indicator
+  }
   return (
     <div
       style={{
