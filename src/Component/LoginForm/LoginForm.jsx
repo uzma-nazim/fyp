@@ -52,7 +52,7 @@ const LoginForm = () => {
             <div className="form-login ">
               <button type="submit" onClick={handleLogin}> Login</button>
               <p className="p1">
-                Don't have account? <Link href={"/"}> Sign Up</Link>
+                Don't have account? <Link href={"/sign-up"}> Sign Up</Link>
               </p>
             </div>
           </form>

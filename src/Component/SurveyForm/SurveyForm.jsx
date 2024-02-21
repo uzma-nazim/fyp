@@ -63,7 +63,7 @@ const SurveyForm = () => {
     // Redirect based on conditions
     if (yesCount > 3) {
       // Redirect to one page
-      history.push("/info");
+      history.push("http://13.236.71.16/");
     } else if (noCount >= 8) {
       // Redirect to another page
       history.push("/success");

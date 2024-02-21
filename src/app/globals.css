@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
+@font-face {
+  font-family: "Blambot";
+  src: url("../font/blambotprobold.ttf") format("ttf");
+
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -31,14 +37,34 @@ img {
 ul {
   padding-left: 0;
   margin-bottom: 0;
-  
 }
+.blue-bg-btn{
+  width: 160px;
+  border-radius: 6px !important;
+  background-color: #0097B2;
+  height: 40px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 
-h6{
+}
+.textColor{
+  color: #01381d ;
+margin: 14px 0px !important;
+max-width: 500px;
+  /* font-family: "Blambot"; */
+
+}
+h6 {
   color: #fe4447 !important;
   margin-top: 10px !important;
 }
+h2{
+  color: #69379d !important;
+/* font-family: "Blambot" !important; */
+text-transform: uppercase !important;
+font-weight: 700;
 
+}
 a {
   text-decoration: none;
   color: #ff9a9c;
@@ -243,7 +269,7 @@ button {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  
+
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -313,6 +339,9 @@ button:hover {
 @media (max-width: 767px) {
   .inner {
     display: block;
+  }
+  .headerBox{
+    padding: 0px 0px !important;
   }
   .formbold-form-wrapper {
     flex-wrap: wrap;
@@ -497,4 +526,13 @@ button:hover {
     position: static;
     top: 20px;
   }
+}
+.homeBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+  /* background-image: url(../images/bg.jpg); */
 }

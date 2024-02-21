@@ -28,7 +28,7 @@ function Header() {
     },
   ];
   return (
-    <Navbar style={{ padding: "0px 20px" }} expand="lg" className="transparent">
+    <Navbar style={{ padding: "0px 20px" }} expand="lg" className="transparent headerBox">
       <Container fluid>
         <Navbar.Brand href="#">
           <img src={logo.src} className="headerlogo" alt="" />

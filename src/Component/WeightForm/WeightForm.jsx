@@ -69,7 +69,7 @@ const WeightForm = () => {
             <img src={temp.src} alt="" />
           </div>
           <form onSubmit={handleAdvice} action="">
-            <h3>Survey</h3>
+            <h3>BMI</h3>
 
             <div style={{ marginTop: "30px" }} className="form-holder">
               <input
@@ -98,7 +98,7 @@ const WeightForm = () => {
                 name="height"
                 value={formData.height}
                 type="number"
-                placeholder="Enter weight"
+                placeholder="Enter height"
                 className="form-control"
                 style={{ fontSize: "14px" }}
               />
