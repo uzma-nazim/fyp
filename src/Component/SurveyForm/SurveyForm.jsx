@@ -6,40 +6,150 @@ const SurveyForm = () => {
     {
       question:
         "How would you describe the regularity of your menstrual cycle?",
+      option: [
+        {
+          value: "yes",
+          label: "Regular (28-32 days)",
+        },
+        {
+          value: "no",
+          label: "Irregular",
+        },
+      ],
     },
     {
       question: "Do you experience heavy or painful periods?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question:
         "Have you noticed changes in your skin, such as acne or oily skin?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question:
         "Have you experienced weight gain or found it difficult to lose weight?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question: "Do you have excess facial or body hair?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question: "How would you describe your hair thickness and health?",
+      option: [
+        {
+          value: "yes",
+          label: "Thinning",
+        },
+        {
+          value: "no",
+          label: "Normal",
+        },
+      ],
     },
     {
       question:
         "Have you noticed darkening of your skin in certain areas (neck, groin, under breasts)?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question: "Do you experience mood swings or changes in mood frequently?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question: "Do you have a history of ovarian cysts?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question: "Have you experienced changes in your appetite or cravings?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
     {
       question:
         "Have you been diagnosed with any other reproductive health conditions?",
+      option: [
+        {
+          value: "yes",
+          label: "yes",
+        },
+        {
+          value: "no",
+          label: "no",
+        },
+      ],
     },
   ];
   const [answers, setAnswers] = useState({}); // State to store answers
@@ -58,7 +168,6 @@ const SurveyForm = () => {
     const noCount = Object.values(answers).filter(
       (answer) => answer === "no"
     ).length;
-    
 
     // Redirect based on conditions
     if (yesCount > 3) {
@@ -87,35 +196,24 @@ const SurveyForm = () => {
                 </label>
 
                 <div className="formbold-radio-flex">
-                  <div className="formbold-radio-group">
-                    <label className="formbold-radio-label">
-                      <input
-                        className="formbold-input-radio"
-                        type="radio"
-                        name={`qusOne${index}`}
-                        id="qusOne"
-                        value="yes"
-                        onChange={handleRadioChange}
-                      />
-                      yes
-                      <span className="formbold-radio-checkmark"></span>
-                    </label>
-                  </div>
-
-                  <div className="formbold-radio-group">
-                    <label className="formbold-radio-label">
-                      <input
-                        className="formbold-input-radio"
-                        type="radio"
-                        name={`qusOne${index}`}
-                        value="no"
-                        onChange={handleRadioChange}
-                        id="qusOne"
-                      />
-                      No
-                      <span className="formbold-radio-checkmark"></span>
-                    </label>
-                  </div>
+                  {item?.option?.map((item) => {
+                    return (
+                      <div className="formbold-radio-group">
+                        <label className="formbold-radio-label">
+                          <input
+                            className="formbold-input-radio"
+                            type="radio"
+                            name={`qusOne${index}`}
+                            id="qusOne"
+                            value={item.value}
+                            onChange={handleRadioChange}
+                          />
+                          {item.label}
+                          <span className="formbold-radio-checkmark"></span>
+                        </label>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );

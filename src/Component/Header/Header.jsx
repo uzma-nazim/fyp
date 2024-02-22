@@ -41,12 +41,12 @@ function Header() {
             style={{ maxHeight: "100px" , marginLeft:"auto" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">About Us</Nav.Link>
+            {/* <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About Us</Nav.Link>
 
             <Nav.Link href="#">
               Contact Us
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
 
           <div
